@@ -1,0 +1,3 @@
+[submodule "src/main/webapp/teacher_homepage"]
+	path = src/main/webapp/teacher_homepage
+	url = ../../zhanlinhan/scie_teacher_homepage.git
