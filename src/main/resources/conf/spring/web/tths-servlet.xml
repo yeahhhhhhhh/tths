@@ -13,6 +13,16 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<mvc:annotation-driven />
+	<!-- 开启注解扫描 -->
+	<context:component-scan base-package="cn.edu.cqupt.scie.tths"/>
+	<!--文件上传  -->
+	<bean id="multipartResolver"
+		  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 
+		<!-- 控制文件上传大小<property name="maxUploadSize">
+			<value>1048576</value>
+		</property> -->
+	</bean>
 
 </beans>

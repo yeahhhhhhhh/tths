@@ -11,5 +11,10 @@
 
 	<context:component-scan base-package="cn.edu.cqupt.scie.tths.dao.*" />
 
-
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver"/>
+		<property name="jdbcUrl" value="jdbc:mysql://127.0.0.1/db_tths"/>
+		<property name="user" value="root"/>
+		<property name="password" value="123456"/>
+	</bean>
 </beans>

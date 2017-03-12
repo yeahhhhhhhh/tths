@@ -18,6 +18,12 @@ public class TimeUtil {
     }
     
     public static Long getTimestamp() {
-	return System.currentTimeMillis()/1000;
+	    return System.currentTimeMillis()/1000;
+    }
+
+    public static void main(String[] args){
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        System.out.println(sdf.format(date));
     }
 }
