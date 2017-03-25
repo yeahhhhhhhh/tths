@@ -13,8 +13,8 @@
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver"/>
-		<property name="jdbcUrl" value="jdbc:mysql://127.0.0.1/db_tths"/>
+		<property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/tths"/>
 		<property name="user" value="root"/>
-		<property name="password" value="123456"/>
+		<property name="password" value="mysql"/>
 	</bean>
 </beans>
