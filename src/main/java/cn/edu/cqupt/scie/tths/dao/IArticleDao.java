@@ -19,5 +19,5 @@ public interface IArticleDao {
 
     List<ArticleModel> getArticleList (int uid, int cid, int statue,String searchString, Page page);
 
-    int getArticleListCount (int uid, int cid, int statue,String searchString, Page page);
+    int getArticleListCount (int uid, int cid, int statue,String searchString);
 }

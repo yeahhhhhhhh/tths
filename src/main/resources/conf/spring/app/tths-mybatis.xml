@@ -25,11 +25,12 @@
 				</value>
 			</array>
 		</property>
-		<property name="typeAliasesPackage" value="cn.edu.cqupt.scie.tths.model"/>
+		<property name="typeAliasesPackage" value="cn.edu.cqupt.scie.tths.model;cn.edu.cqupt.scie.tths.model.page"/>
 	</bean>
 
 	<!-- 注册映射器 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
 		<property name="basePackage" value="cn.edu.cqupt.scie.tths.dao.impl.mybatis"/>
 	</bean>
 </beans>

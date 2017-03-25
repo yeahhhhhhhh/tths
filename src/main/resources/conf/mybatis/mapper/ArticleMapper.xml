@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="cn.edu.cqupt.scie.tths.dao.impl.mybatis.ArticleMapper">
+    <insert id="saveArticle"useGeneratedKeys="true" keyProperty="id" parameterType="ArticleModel">
+        insert into
+         tths_article(cid,uid,title,profile,body,status,time_update)
+         values
+         (#{cid},#{uid},#{title},#{profile},#{body},#{status},#{time_update});
+    </insert>
+
+    <update id="updateArticle" parameterType="ArticleModel">
+        UPDATE tths_article
+        <set>
+            title=#{title},
+            profile=#{profilr},
+            time_update=#{timeUpdate},
+            <if test="status==@cn.edu.cqupt.scie.tths.constant.ArticleConstant@PUBISH.getStatus()">
+                status=#{status},
+            </if>
+        </set>
+    </update>
+
+    <delete id="deleteArticle" >
+        DELETE tths_article WHERE id=#{id}
+    </delete>
+
+    <select id="getArticle" resultType="ArticleModel">
+        select
+          a.id,
+          a.uid,
+          a.cid,
+          c.name,
+          a.title,
+          a.profile,
+          a.body,
+          a.status,
+          a.time_update,
+          a.comment,
+          a.count,
+          a.star,
+          a.top
+         from tths_article a
+          LEFT JOIN page_category c
+          where id = #{id}
+    </select>
+
+    <select id="getArticleList" resultType="ArticleModel" parameterType="Page">
+        select
+          a.id,
+          a.uid,
+          a.cid,
+          c.name,
+          a.title,
+          a.profile,
+          a.body,
+          a.status,
+          a.time_update,
+          a.comment,
+          a.count,
+          a.star,
+          a.top
+         from tths_article a
+          LEFT JOIN page_category c
+          <where>
+              <if test="uid!=@cn.edu.cqupt.scie.tths.constant.ArticleConstant@ALL_UID.getStatus()">
+                  uid=#{uid}
+              </if>
+              <if test="cid!=@cn.edu.cqupt.scie.tths.constant.ArticleConstant@ALL_CID.getStatus()">
+                  cid=#{cid}
+              </if>
+              <if test="status!=@cn.edu.cqupt.scie.tths.constant.ArticleConstant@REMAIN.getStatus()">
+                  status=#{status}
+              </if>
+              <if test="searchString!=null and &quot;&quot;.equals(searchString.trim())">
+                  searchString LIKE "%"#{searchString}"%"
+              </if>
+          </where>
+        LIMIT #{page.dbIndex},#{page.dbNumber}
+    </select>
+
+    <select id="getArticleListCount" >
+        select
+          COUNT(*)
+         from tths_article
+        <where>
+            <if test="uid!=@cn.edu.cqupt.scie.tths.constant.ArticleConstant@ALL_UID.getStatus()">
+                uid=#{uid}
+            </if>
+            <if test="cid!=@cn.edu.cqupt.scie.tths.constant.ArticleConstant@ALL_CID.getStatus()">
+                cid=#{cid}
+            </if>
+            <if test="status!=@cn.edu.cqupt.scie.tths.constant.ArticleConstant@REMAIN.getStatus()">
+                status=#{status}
+            </if>
+            <if test="searchString!=null and &quot;&quot;.equals(searchString.trim())">
+                searchString LIKE "%"#{searchString}"%"
+            </if>
+        </where>
+    </select>
+</mapper>
