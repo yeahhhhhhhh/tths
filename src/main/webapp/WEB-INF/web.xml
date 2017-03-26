@@ -42,6 +42,7 @@
   <filter-mapping>
     <filter-name>LoginFilter</filter-name>
     <url-pattern>/user/changeInfo</url-pattern>
+    <url-pattern>/file/fileDelete</url-pattern>
   </filter-mapping>
 
   <!-- 应用上下文配置 -->

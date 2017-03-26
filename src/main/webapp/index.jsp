@@ -4,6 +4,7 @@
 
     <form action="${pageContext.request.contextPath}/file/fileUpload" method="post" enctype="multipart/form-data">
         <input type="file" name="file1">
+        uid:<input type="text" name="uid" value="282">
         <input type="submit" value="上传">
     </form>
 
@@ -23,6 +24,11 @@
     </form>
 
     <a href="${pageContext.request.contextPath}/user/logout">注销</a>
+
+<form action="${pageContext.request.contextPath}/file/fileDelete" method="post">
+    文件fid：<input type="text" name="fid">
+    <input type="submit" value="删除该文件">
+</form>
 
 </body>
 </html>

@@ -31,4 +31,8 @@
         </set>
         where id = #{uid}
     </update>
+
+    <select id="findUserByUid" parameterType="int" resultMap="TeacherResultMap">
+        select * from tth_user where id = #{uid}
+    </select>
 </mapper>

@@ -14,5 +14,7 @@ public interface IFileDao {
 
     int uploadFiles(List<FileModel> fileModelList);
 
-    FileModel findFileByFid(String fid);
+    FileModel findFileByFid(int fid);
+
+    void addDownLoadCount(int fid);
 }

@@ -18,4 +18,6 @@ public interface IUserDao {
     UserModel findUserByUsername(UserModel userModel);
 
     int changeInfo(UserModel userModel);
+
+    UserModel findUserByUid(int uid);
 }

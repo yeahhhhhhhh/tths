@@ -1,5 +1,6 @@
 package cn.edu.cqupt.scie.tths.controller;
 
+import cn.edu.cqupt.scie.tths.model.FileModel;
 import cn.edu.cqupt.scie.tths.model.json.ResponseJson;
 import cn.edu.cqupt.scie.tths.service.IFileService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +38,12 @@ public class FileController {
     }
 
     @RequestMapping(value = "/fileDownload")
-    public @ResponseBody ResponseJson fileDownload(HttpServletRequest request, HttpServletResponse response,String fid) throws UnsupportedEncodingException {
+    public @ResponseBody ResponseJson fileDownload(HttpServletRequest request, HttpServletResponse response,int fid) throws UnsupportedEncodingException {
         return fileService.fileDownload(request,response,fid);
+    }
+
+    @RequestMapping(value = "/fileDelete")
+    public @ResponseBody ResponseJson fileDelete(FileModel fileModel,HttpServletRequest request){
+        return fileService.fileDelete(fileModel,request);
     }
 }

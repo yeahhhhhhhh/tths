@@ -23,15 +23,24 @@ public class LoginFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse resp = (HttpServletResponse) response;
-        int uid = Integer.parseInt(req.getParameter("uid"));
-        int sessionUid = (int) req.getSession().getAttribute("uid");
-        if(uid == sessionUid && uid != 0){
-            chain.doFilter(request,response);
-        }else {
+        int uid;
+        int sessionUid;
+        String uidStr = req.getParameter("uid");
+        if(req.getSession().getAttribute("uid") != null && uidStr != null && !"".equals(uidStr)){
+            sessionUid = (int) req.getSession().getAttribute("uid");
+            uid = Integer.parseInt(uidStr);
+            if(uid == sessionUid && uid != 0){
+                chain.doFilter(request,response);
+                return;
+            }
+        } else {
             ObjectMapper objectMapper = new ObjectMapper();
             ResponseJson responseJson = new ResponseJson(StatusCodeConstant.USER_UNLOGIN);
+            resp.setContentType("text/html;charset=utf-8");
             response.getWriter().write(objectMapper.writeValueAsString(responseJson));
         }
+
+
     }
 
     @Override

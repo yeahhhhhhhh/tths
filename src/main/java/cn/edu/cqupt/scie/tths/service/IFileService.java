@@ -1,5 +1,6 @@
 package cn.edu.cqupt.scie.tths.service;
 
+import cn.edu.cqupt.scie.tths.model.FileModel;
 import cn.edu.cqupt.scie.tths.model.json.ResponseJson;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
@@ -16,5 +17,7 @@ public interface IFileService {
 
     ResponseJson uploadFiles(MultipartHttpServletRequest request) throws IOException;
 
-    ResponseJson fileDownload(HttpServletRequest request, HttpServletResponse response,String fid) throws UnsupportedEncodingException;
+    ResponseJson fileDownload(HttpServletRequest request, HttpServletResponse response,int fid) throws UnsupportedEncodingException;
+
+    ResponseJson fileDelete(FileModel fileModel, HttpServletRequest request);
 }

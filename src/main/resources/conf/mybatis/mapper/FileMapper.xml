@@ -3,7 +3,7 @@
 
 <mapper namespace="cn.edu.cqupt.scie.tths.dao.impl.mybatis.FileMapper">
     <insert id="uploadFile" parameterType="FileModel">
-        insert into tth_file(fileName,realName,type,length) values(#{fileName},#{realName},#{type},#{length});
+        insert into tth_file(uid,fileUploader,fileName,realName,type,length) values(#{uid},#{fileUploader},#{fileName},#{realName},#{type},#{length});
     </insert>
 
     <insert id="uploadFiles" parameterType="java.util.List">
@@ -13,7 +13,11 @@
         </foreach>
     </insert>
 
-    <select id="findFileByFid" resultType="FileModel">
+    <select id="findFileByFid" resultType="FileModel" parameterType="int">
         select * from tth_file where fid = #{fid}
     </select>
+
+    <update id="addDownLoadCount" parameterType="int">
+        update tth_file set download = download+1 where fid = #{fid}
+    </update>
 </mapper>
