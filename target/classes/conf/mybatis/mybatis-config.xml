@@ -7,5 +7,7 @@
     </settings>
     <typeAliases>
         <typeAlias type="cn.edu.cqupt.scie.tths.model.FileModel" alias="FileModel"/>
+        <typeAlias type="cn.edu.cqupt.scie.tths.model.json.PageJson" alias="PageJson"/>
+        <typeAlias type="cn.edu.cqupt.scie.tths.model.UserModel" alias="UserModel"/>
     </typeAliases>
 </configuration>

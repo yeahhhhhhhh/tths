@@ -34,6 +34,16 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
+  <!-- 验证是否已登录 -->
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>cn.edu.cqupt.scie.tths.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/user/changeInfo</url-pattern>
+  </filter-mapping>
+
   <!-- 应用上下文配置 -->
   <context-param>
     <param-name>contextConfigLocation</param-name>

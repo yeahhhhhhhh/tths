@@ -173,7 +173,7 @@ public class FileService implements IFileService{
      * @return
      */
     @Override
-    public ResponseJson fileDownload(HttpServletRequest request, HttpServletResponse response, String fid) {
+    public ResponseJson fileDownload(HttpServletRequest request, HttpServletResponse response, String fid) throws UnsupportedEncodingException {
         //判断fid是否为空
         if(fid == null || "".equals(fid))
             return new ResponseJson(StatusCodeConstant.INVALID_REQUEST);
@@ -185,9 +185,12 @@ public class FileService implements IFileService{
         if(fileModel == null)
             return new ResponseJson(StatusCodeConstant.INVALID_REQUEST);
 
+
+
+        byte[] bytes = fileModel.getFileName().getBytes("utf-8");
         //设置html头部信息,http协议下载
-        response.setContentType("application/octct-stream;charset=UTF-8");
-        response.setHeader("Content-Disposition", "attachment; filename="+ fileModel.getFileName());
+        response.setContentType("multipart/form-data;charset=UTF-8");
+        response.setHeader("Content-Disposition", "attachment; filename="+ new String(bytes,"iso-8859-1"));
 
         //将日期格式转成yyyy-MM-dd
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");

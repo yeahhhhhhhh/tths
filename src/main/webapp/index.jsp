@@ -7,7 +7,22 @@
         <input type="submit" value="上传">
     </form>
 
-    <a href="${pageContext.request.contextPath}/file/fileDownload?fid=2">下载文件</a>
+    <a href="${pageContext.request.contextPath}/file/fileDownload?fid=3">下载文件</a>
+
+    <form action="${pageContext.request.contextPath}/user/login" method="post">
+        用户名：<input type="text" name="username">
+        密码：<input type="text" name="password">
+        <input type="submit" value="登录">
+    </form>
+
+    <form action="${pageContext.request.contextPath}/user/changeInfo" method="post">
+        邮箱：<input type="text" name="email">
+        电话：<input type="text" name="number">
+        uid:<input type="text" name="uid" value="282">
+        <input type="submit" value="修改">
+    </form>
+
+    <a href="${pageContext.request.contextPath}/user/logout">注销</a>
 
 </body>
 </html>

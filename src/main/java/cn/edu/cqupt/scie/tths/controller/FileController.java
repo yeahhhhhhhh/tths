@@ -13,6 +13,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 /**
@@ -36,7 +37,7 @@ public class FileController {
     }
 
     @RequestMapping(value = "/fileDownload")
-    public @ResponseBody ResponseJson fileDownload(HttpServletRequest request, HttpServletResponse response,String fid){
+    public @ResponseBody ResponseJson fileDownload(HttpServletRequest request, HttpServletResponse response,String fid) throws UnsupportedEncodingException {
         return fileService.fileDownload(request,response,fid);
     }
 }

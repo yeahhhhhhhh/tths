@@ -6,6 +6,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 
 /**
  * Created by why on 2017/3/11.
@@ -15,5 +16,5 @@ public interface IFileService {
 
     ResponseJson uploadFiles(MultipartHttpServletRequest request) throws IOException;
 
-    ResponseJson fileDownload(HttpServletRequest request, HttpServletResponse response,String fid);
+    ResponseJson fileDownload(HttpServletRequest request, HttpServletResponse response,String fid) throws UnsupportedEncodingException;
 }
