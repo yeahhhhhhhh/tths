@@ -12,17 +12,21 @@
     <update id="updateArticle" parameterType="ArticleModel">
         UPDATE tth_article
         <set>
-            title=#{title},
-            profile=#{profilr},
-            time_update=#{timeUpdate},
-            <if test="status==@cn.edu.cqupt.scie.tths.constant.ArticleConstant@PUBLISH.getStatus()">
-                status=#{status},
-            </if>
+            <trim suffixOverrides=",">
+                title=#{title},
+                profile=#{profile},
+                body=#{body},
+                time_update=#{timeUpdate},
+                <if test="status==@cn.edu.cqupt.scie.tths.constant.ArticleConstant@PUBLISH.getStatus()">
+                    status=#{status},
+                </if>
+            </trim>
+            WHERE id=#{id}
         </set>
     </update>
 
     <delete id="deleteArticle" >
-        DELETE tth_article WHERE id=#{id}
+        DELETE FROM tth_article WHERE id=#{id}
     </delete>
 
     <select id="getArticle" resultType="ArticleModel">
@@ -54,7 +58,6 @@
           c.name,
           a.title,
           a.profile,
-          a.body,
           a.status,
           a.time_update,
           a.comment,
@@ -71,17 +74,15 @@
               <if test="cid!=@cn.edu.cqupt.scie.tths.constant.ArticleConstant@ALL_CID.getStatus()">
                   AND a.cid=#{cid}
               </if>
-              <if test="status!=@cn.edu.cqupt.scie.tths.constant.ArticleConstant@REMAIN.getStatus()">
-                  AND a.status=#{status}
-              </if>
-              <if test="searchString!=null and &quot;&quot;.equals(searchString.trim())">
-                  AND a.body LIKE "%"#{searchString}"%"
+              <if test="searchString!=null and !&quot;&quot;.equals(searchString.trim())">
+                  AND a.title LIKE "%"#{searchString}"%"
               </if>
           </where>
+        ORDER BY top DESC ,time_update DESC
         LIMIT #{page.dbIndex},#{page.dbNumber}
     </select>
 
-    <select id="getArticleListCount" >
+    <select id="getArticleListCount" resultType="int">
         select
           COUNT(*)
          from tth_article
@@ -92,11 +93,8 @@
             <if test="cid!=@cn.edu.cqupt.scie.tths.constant.ArticleConstant@ALL_CID.getStatus()">
                 cid=#{cid}
             </if>
-            <if test="status!=@cn.edu.cqupt.scie.tths.constant.ArticleConstant@REMAIN.getStatus()">
-                status=#{status}
-            </if>
-            <if test="searchString!=null and &quot;&quot;.equals(searchString.trim())">
-                body LIKE "%"#{searchString}"%"
+            <if test="searchString!=null and !&quot;&quot;.equals(searchString.trim())">
+                title LIKE "%"#{searchString}"%"
             </if>
         </where>
     </select>

@@ -2,6 +2,7 @@ package cn.edu.cqupt.scie.tths.dao;
 
 import cn.edu.cqupt.scie.tths.dao.impl.mybatis.ArticleMapper;
 import cn.edu.cqupt.scie.tths.model.ArticleModel;
+import cn.edu.cqupt.scie.tths.model.page.Page;
 import cn.edu.cqupt.scie.tths.util.TimeUtil;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -38,11 +39,22 @@ public class IArticleDaoTest {
 
     @org.junit.Test
     public void updateArticle() throws Exception {
-
+        ArticleModel articleModel= new ArticleModel();
+        articleModel.setId(333);
+        articleModel.setUid(1);
+        articleModel.setCid(1);
+        articleModel.setTitle("1325");
+        articleModel.setProfile("8786");
+        articleModel.setBody("交45645间");
+        articleModel.setStatus(0);
+        articleModel.setTimeUpdate(getTimestamp());
+        articleDao.updateArticle(articleModel);
+        System.out.println(articleDao.getArticle(articleModel.getId()));
     }
 
     @org.junit.Test
     public void deleteArticle() throws Exception {
+        articleDao.deleteArticle(334);
 
     }
 
@@ -53,12 +65,15 @@ public class IArticleDaoTest {
 
     @org.junit.Test
     public void getArticleList() throws Exception {
-
+        Page page = new Page();
+        page.setDbIndex(0);
+        page.setDbNumber(10);
+        System.out.println(articleDao.getArticleList(0,0,"IT",page));
     }
 
     @org.junit.Test
     public void getArticleListCount() throws Exception {
-
+        System.out.println(articleDao.getArticleListCount(0,0,"IT"));
     }
 
 }

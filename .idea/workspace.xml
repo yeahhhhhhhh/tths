@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11f906d6-28c1-455c-8298-2dfca5ee1370" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/constant/PageConstant.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/service/IArticleService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/service/impl/ArticleService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/scie/tths/dao/IArticleDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/scie/tths/dao/IArticleDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/scie/tths/dao/IArticleDaoTest.class" afterPath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/scie/tths/dao/IArticleDaoTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/dao/IArticleDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/dao/IArticleDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/dao/IArticleDaoTest.java" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/dao/IArticleDaoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/model/page/Page.java" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/model/page/Page.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/util/ResponseHandelUtil.java" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/util/ResponseHandelUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/conf/mybatis/mapper/ArticleMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/conf/mybatis/mapper/ArticleMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/conf/mybatis/mybatis-config.xml" afterPath="$PROJECT_DIR$/src/main/resources/conf/mybatis/mybatis-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/conf/spring/app/tths-dao.xml" afterPath="$PROJECT_DIR$/src/main/resources/conf/spring/app/tths-dao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/conf/mybatis/mapper/ArticleMapper.xml" afterPath="$PROJECT_DIR$/target/classes/conf/mybatis/mapper/ArticleMapper.xml" />
     </list>
     <ignored path="tths.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,28 +39,28 @@
       <file leaf-file-name="FileService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/service/impl/FileService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
+            <state relative-caret-position="20">
               <caret line="184" column="29" selection-start-line="184" selection-start-column="29" selection-end-line="184" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IArticleDaoTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IArticleDaoTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/dao/IArticleDaoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+            <state relative-caret-position="87">
+              <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tths-mybatis.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring/app/tths-mybatis.xml">
+      <file leaf-file-name="IArticleDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/dao/IArticleDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="140">
+              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -68,69 +76,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArticleMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/conf/mybatis/mapper/ArticleMapper.xml">
+      <file leaf-file-name="IArticleService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/service/IArticleService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+            <state relative-caret-position="400">
+              <caret line="21" column="79" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
               <folding>
-                <marker date="1490467462588" expanded="true" signature="332:504" ph="insert into tth_article" />
-                <marker date="1490467462588" expanded="true" signature="1058:1426" ph="select a.id,... tth_article" />
-                <marker date="1490467462588" expanded="true" signature="1530:2591" ph="select a.id,... tth_article" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/conf/mybatis/mapper/FileMapper.xml">
+      <file leaf-file-name="ArticleService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/service/impl/ArticleService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+            <state relative-caret-position="260">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageConstant.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/constant/PageConstant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
               <folding>
-                <marker date="1490460144164" expanded="true" signature="284:385" ph="insert into tth_file... " />
-                <marker date="1490460144164" expanded="true" signature="765:806" ph="select * fro... tth_file" />
+                <element signature="e#180#181#0" expanded="true" />
+                <element signature="e#213#214#0" expanded="true" />
+                <element signature="e#262#263#0" expanded="true" />
+                <element signature="e#306#307#0" expanded="true" />
+                <element signature="e#350#351#0" expanded="true" />
+                <element signature="e#394#395#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tths-servlet.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring/web/tths-servlet.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tths-dao.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring/app/tths-dao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IFileDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/dao/IFileDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/controller/FileController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -142,6 +122,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -167,7 +148,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/conf/spring/app/tths-mybatis.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/util/ResponseHandelUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/dao/IFileDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/conf/mybatis/mapper/FileMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/service/IFileService.java" />
@@ -181,6 +161,13 @@
         <option value="$PROJECT_DIR$/src/main/resources/conf/mybatis/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/dao/IArticleDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/conf/mybatis/mapper/ArticleMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/service/IArticleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/service/impl/ArtcielService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/dao/IArticleDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/util/ResponseHandelUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/model/page/Page.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/constant/PageConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/service/impl/ArticleService.java" />
       </list>
     </option>
   </component>
@@ -257,6 +244,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -605,6 +594,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tths" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tths" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tths" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="json" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -736,8 +759,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -764,95 +785,7 @@
       <recent name="D:\workspaceIntellij\tths\src\main\resources\conf\mybatis" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IArticleDaoTest.saveArticle">
-    <configuration default="false" name="FileService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="cn.edu.cqupt.scie.tths.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.scie.tths.service.impl.FileService" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="tths" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="TimeUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="cn.edu.cqupt.scie.tths.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.scie.tths.util.TimeUtil" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="tths" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="tths [clean]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="clean" />
-              </list>
-            </option>
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method />
-    </configuration>
-    <configuration default="false" name="tths [compile]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="compile" />
-              </list>
-            </option>
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.IArticleDaoTest.getArticleList">
     <configuration default="false" name="IArticleDaoTest.saveArticle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -866,6 +799,110 @@
       <option name="PACKAGE_NAME" value="cn.edu.cqupt.scie.tths.dao" />
       <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.scie.tths.dao.IArticleDaoTest" />
       <option name="METHOD_NAME" value="saveArticle" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="IArticleDaoTest.updateArticle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.cqupt.scie.tths.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tths" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cn.edu.cqupt.scie.tths.dao" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.scie.tths.dao.IArticleDaoTest" />
+      <option name="METHOD_NAME" value="updateArticle" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="IArticleDaoTest.deleteArticle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.cqupt.scie.tths.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tths" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cn.edu.cqupt.scie.tths.dao" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.scie.tths.dao.IArticleDaoTest" />
+      <option name="METHOD_NAME" value="deleteArticle" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="IArticleDaoTest.getArticleListCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.cqupt.scie.tths.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tths" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cn.edu.cqupt.scie.tths.dao" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.scie.tths.dao.IArticleDaoTest" />
+      <option name="METHOD_NAME" value="getArticleListCount" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="IArticleDaoTest.getArticleList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.cqupt.scie.tths.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tths" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cn.edu.cqupt.scie.tths.dao" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.scie.tths.dao.IArticleDaoTest" />
+      <option name="METHOD_NAME" value="getArticleList" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1401,19 +1438,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tomcat8" />
-      <item index="1" class="java.lang.String" itemvalue="Application.FileService" />
-      <item index="2" class="java.lang.String" itemvalue="Application.TimeUtil" />
-      <item index="3" class="java.lang.String" itemvalue="Maven.tths [clean]" />
-      <item index="4" class="java.lang.String" itemvalue="Maven.tths [compile]" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.IArticleDaoTest.saveArticle" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.IArticleDaoTest.saveArticle" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.IArticleDaoTest.updateArticle" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.IArticleDaoTest.deleteArticle" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.IArticleDaoTest.getArticleListCount" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.IArticleDaoTest.getArticleList" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.IArticleDaoTest.saveArticle" />
-        <item index="1" class="java.lang.String" itemvalue="Maven.tths [compile]" />
-        <item index="2" class="java.lang.String" itemvalue="Maven.tths [clean]" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TimeUtil" />
-        <item index="4" class="java.lang.String" itemvalue="Application.FileService" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.IArticleDaoTest.getArticleList" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.IArticleDaoTest.getArticleListCount" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.IArticleDaoTest.deleteArticle" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.IArticleDaoTest.updateArticle" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.IArticleDaoTest.saveArticle" />
       </list>
     </recent_temporary>
   </component>
@@ -1436,35 +1473,45 @@
       <workItem from="1489303459757" duration="105000" />
       <workItem from="1489303671449" duration="2120000" />
       <workItem from="1489306463093" duration="7964000" />
-      <workItem from="1490466888483" duration="602000" />
+      <workItem from="1490466888483" duration="1203000" />
+      <workItem from="1490616997715" duration="4921000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="IArticleDaoTest_saveArticle - 2017.03.26 at 02h 35m 18s.xml">
-      <configuration name="IArticleDaoTest.saveArticle" configurationId="JUnit" />
+    <history-entry file="IArticleDaoTest_getArticleList - 2017.03.28 at 00h 06m 26s.xml">
+      <configuration name="IArticleDaoTest.getArticleList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IArticleDaoTest_saveArticle - 2017.03.26 at 02h 37m 07s.xml">
-      <configuration name="IArticleDaoTest.saveArticle" configurationId="JUnit" />
+    <history-entry file="IArticleDaoTest_getArticleList - 2017.03.28 at 00h 07m 15s.xml">
+      <configuration name="IArticleDaoTest.getArticleList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IArticleDaoTest_saveArticle - 2017.03.26 at 02h 38m 53s.xml">
-      <configuration name="IArticleDaoTest.saveArticle" configurationId="JUnit" />
+    <history-entry file="IArticleDaoTest_getArticleList - 2017.03.28 at 00h 08m 10s.xml">
+      <configuration name="IArticleDaoTest.getArticleList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IArticleDaoTest_saveArticle - 2017.03.26 at 02h 40m 15s.xml">
-      <configuration name="IArticleDaoTest.saveArticle" configurationId="JUnit" />
+    <history-entry file="IArticleDaoTest_getArticleList - 2017.03.28 at 00h 09m 05s.xml">
+      <configuration name="IArticleDaoTest.getArticleList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IArticleDaoTest_saveArticle - 2017.03.26 at 02h 41m 14s.xml">
-      <configuration name="IArticleDaoTest.saveArticle" configurationId="JUnit" />
+    <history-entry file="IArticleDaoTest_getArticleList - 2017.03.28 at 00h 10m 32s.xml">
+      <configuration name="IArticleDaoTest.getArticleList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IArticleDaoTest_saveArticle - 2017.03.26 at 02h 42m 55s.xml">
-      <configuration name="IArticleDaoTest.saveArticle" configurationId="JUnit" />
+    <history-entry file="IArticleDaoTest_getArticleList - 2017.03.28 at 00h 11m 55s.xml">
+      <configuration name="IArticleDaoTest.getArticleList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IArticleDaoTest_saveArticle - 2017.03.26 at 02h 44m 40s.xml">
-      <configuration name="IArticleDaoTest.saveArticle" configurationId="JUnit" />
+    <history-entry file="IArticleDaoTest_getArticleList - 2017.03.28 at 00h 14m 37s.xml">
+      <configuration name="IArticleDaoTest.getArticleList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IArticleDaoTest_getArticleList - 2017.03.28 at 00h 15m 19s.xml">
+      <configuration name="IArticleDaoTest.getArticleList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IArticleDaoTest_getArticleListCount - 2017.03.28 at 00h 10m 18s.xml">
+      <configuration name="IArticleDaoTest.getArticleListCount" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IArticleDaoTest_getArticleListCount - 2017.03.28 at 00h 11m 50s.xml">
+      <configuration name="IArticleDaoTest.getArticleListCount" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29533000" />
+    <option name="totallyTimeSpent" value="35055000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="916" extended-state="7" />
@@ -1488,8 +1535,8 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35652173" sideWeight="0.49694657" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1524,32 +1571,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/controller/UserController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/mybatis/mapper/UserMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring/app/tths-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring/app/tths-dao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1716,16 +1737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/util/ResponseHandelUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1762,15 +1773,8 @@
         <state relative-caret-position="480">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/constant/StatusCodeConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -1778,7 +1782,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1786,21 +1792,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/service/impl/FileService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="184" column="29" selection-start-line="184" selection-start-column="29" selection-end-line="184" selection-end-column="29" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring/web/tths-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
+        <state relative-caret-position="340">
           <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
           <folding />
         </state>
@@ -1808,7 +1808,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring/app/tths-dao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="340">
           <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
           <folding />
         </state>
@@ -1816,16 +1816,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring/app/tths-mybatis.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="580">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/mybatis/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1841,22 +1833,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/mybatis/mapper/ArticleMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/service/impl/FileService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
-          <folding>
-            <marker date="1490467462588" expanded="true" signature="332:504" ph="insert into tth_article" />
-            <marker date="1490467462588" expanded="true" signature="1058:1426" ph="select a.id,... tth_article" />
-            <marker date="1490467462588" expanded="true" signature="1530:2591" ph="select a.id,... tth_article" />
-          </folding>
+        <state relative-caret-position="20">
+          <caret line="184" column="29" selection-start-line="184" selection-start-column="29" selection-end-line="184" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/dao/IArticleDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+        <state relative-caret-position="87">
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/mybatis/mapper/ArticleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="81" column="46" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="46" />
+          <folding>
+            <marker date="1490631267064" expanded="true" signature="332:504" ph="insert into tth_article" />
+            <marker date="1490631267064" expanded="true" signature="1086:1124" ph="DELETE FROM " />
+            <marker date="1490631267064" expanded="true" signature="1203:1571" ph="select a.id,... tth_article" />
+            <marker date="1490631267064" expanded="true" signature="1675:2601" ph="select a.id,... tth_article" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/mybatis/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/dao/IArticleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/service/IArticleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="21" column="79" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/model/page/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/constant/StatusCodeConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/constant/PageConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding>
+            <element signature="e#180#181#0" expanded="true" />
+            <element signature="e#213#214#0" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#306#307#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/util/ResponseHandelUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/scie/tths/service/impl/ArticleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding />
         </state>
       </provider>
