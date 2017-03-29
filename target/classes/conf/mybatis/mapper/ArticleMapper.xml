@@ -13,13 +13,16 @@
         UPDATE tth_article
         <set>
             <trim suffixOverrides=",">
-                title=#{title},
-                profile=#{profile},
-                body=#{body},
-                time_update=#{timeUpdate},
-                <if test="status==@cn.edu.cqupt.scie.tths.constant.ArticleConstant@PUBLISH.getStatus()">
-                    status=#{status},
+                <if test="title!=null and !&quot;&quot;.equals(title.trim())">
+                    title=#{title},
                 </if>
+                <if test="profile!=null and !&quot;&quot;.equals(profile.trim())">
+                    profile=#{profile},
+                </if>
+                <if test="body!=null and !&quot;&quot;.equals(body.trim())">
+                    body=#{body},
+                </if>
+                time_update=#{timeUpdate},
             </trim>
             WHERE id=#{id}
         </set>

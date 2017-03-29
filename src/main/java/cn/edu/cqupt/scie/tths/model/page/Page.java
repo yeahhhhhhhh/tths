@@ -63,7 +63,7 @@ public class Page {
 
     public void setTotalNumber(int totalNumber) {
         this.totalNumber = totalNumber;
-        this.count();
+        //this.count();
     }
 
     public int getCurrentPage() {
@@ -88,7 +88,7 @@ public class Page {
 
     public void setPageNumber(int pageNumber) {
         this.pageNumber = pageNumber;
-        this.count();
+        //this.count();
     }
 
     public int getDbIndex() {

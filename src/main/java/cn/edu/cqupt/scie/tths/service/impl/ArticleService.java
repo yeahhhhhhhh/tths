@@ -104,12 +104,12 @@ public class ArticleService implements IArticleService{
         int totalNumber = articleDao.getArticleListCount(
                 ArticleConstant.ALL_UID.getStatus(),
                 ArticleConstant.ALL_CID.getStatus(),
-                "");
+                searchString);
         Page page = this.getPageOfArticles(currentPage,totalNumber);
         List<ArticleModel> articleModels = articleDao.getArticleList(
                 ArticleConstant.ALL_UID.getStatus(),
                 ArticleConstant.ALL_CID.getStatus(),
-                "",
+                searchString,
                 page
         );
         return listHandel(articleModels, page);
@@ -120,6 +120,7 @@ public class ArticleService implements IArticleService{
         page.setCurrentPage(currentPage);
         page.setTotalNumber(totalNumber);
         page.setPageNumber(PageConstant.ARTICLE.getPageNumber());
+
         page.count();
         return page;
     }
