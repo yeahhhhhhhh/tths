@@ -24,8 +24,8 @@ public class UserController {
     private IUserService userService;
 
     @RequestMapping(value = "/findTeachers")
-    public @ResponseBody ResponseJson findTeachers(PageJson pageJson){
-        return userService.findTeachers(pageJson);
+    public @ResponseBody ResponseJson findTeachers(PageJson pageJson,String teacher_title,String teacher_job,String username){
+        return userService.findTeachers(pageJson,teacher_title,teacher_job,username);
     }
 
     @RequestMapping(value = "/login")

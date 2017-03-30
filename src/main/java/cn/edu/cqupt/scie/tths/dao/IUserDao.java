@@ -11,9 +11,9 @@ import java.util.List;
  */
 @Repository("userDao")
 public interface IUserDao {
-    List<UserModel> findTeachers(int begin,int count);
+    List<UserModel> findTeachers(int begin,int count,String teacher_title,String teacher_job,String username);
 
-    int findTeachersCount();
+    int findTeachersCount(String teacher_title,String teacher_job,String username);
 
     UserModel findUserByUsername(UserModel userModel);
 

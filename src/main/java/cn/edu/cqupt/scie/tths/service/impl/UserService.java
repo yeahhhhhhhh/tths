@@ -24,11 +24,13 @@ public class UserService implements IUserService {
     private IUserDao userDao;
 
     @Override
-    public ResponseJson findTeachers(PageJson pageJson) {
+    public ResponseJson findTeachers(PageJson pageJson,String teacher_title,String teacher_job,String username) {
+        if(username != null)
+            username = "%"+username+"%";
         //分页查询教师基本信息
-        List<UserModel>teacherList = userDao.findTeachers((pageJson.getNowPage()-1)*pageJson.getListCount(),pageJson.getListCount());
+        List<UserModel>teacherList = userDao.findTeachers((pageJson.getNowPage()-1)*pageJson.getListCount(),pageJson.getListCount(),teacher_title,teacher_job,username);
         //查询教师总人数
-        int teacherCount = userDao.findTeachersCount();
+        int teacherCount = userDao.findTeachersCount(teacher_title,teacher_job,username);
         //计算总页数
         int pageCount = teacherCount % pageJson.getListCount() == 0 ? teacherCount / pageJson.getListCount() : (teacherCount / pageJson.getListCount()) + 1;
         //将信息存入pageJson

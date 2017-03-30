@@ -5,12 +5,37 @@
     <resultMap id="TeacherResultMap" type="cn.edu.cqupt.scie.tths.model.UserModel">
         <id column="id" property="uid"/>
     </resultMap>
-    <select id="findTeachers" resultMap="TeacherResultMap" parameterType="int">
-        select * from tth_user limit #{begin},#{count}
+    <select id="findTeachers" resultMap="TeacherResultMap">
+        select * from tth_user
+         <where>
+             1 = 1
+             <if test="teacher_title != null">
+                 and teacher_title = #{teacher_title}
+             </if>
+             <if test="teacher_job != null">
+                 and teacher_job = #{teacher_job}
+             </if>
+             <if test="username != null">
+                 and username like #{username}
+             </if>
+         </where>
+         limit #{begin},#{count}
     </select>
 
     <select id="findTeachersCount" resultType="int">
         select count(*) from tth_user
+        <where>
+            1 = 1
+            <if test="teacher_title != null">
+                and teacher_title = #{teacher_title}
+            </if>
+            <if test="teacher_job != null">
+                and teacher_job = #{teacher_job}
+            </if>
+            <if test="username != null">
+                and username like #{username}
+            </if>
+        </where>
     </select>
 
     <select id="findUserByUsername" resultMap="TeacherResultMap" parameterType="UserModel">

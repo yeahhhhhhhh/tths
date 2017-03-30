@@ -11,8 +11,11 @@ import java.util.List;
  */
 public interface UserMapper extends IUserDao {
     @Override
-    List<UserModel> findTeachers(@Param("begin") int begin,@Param("count") int count);
+    List<UserModel> findTeachers(@Param("begin") int begin,@Param("count") int count,@Param("teacher_title")String teacher_title,@Param("teacher_job")String teacher_job,@Param("username")String username);
 
     @Override
     UserModel findUserByUid(@Param("uid") int uid);
+
+    @Override
+    int findTeachersCount(@Param("teacher_title") String teacher_title,@Param("teacher_job") String teacher_job,@Param("username") String username);
 }
