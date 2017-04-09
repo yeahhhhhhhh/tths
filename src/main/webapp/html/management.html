@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>通信与信息工程学院教师主页</title>
+	<link rel="stylesheet" href="style/css/animate.css">
+	<link rel="stylesheet" href="umeditor/themes/default/css/umeditor.min.css" >
+	<link rel="stylesheet" href="style/css/login.css">
+	<link rel="stylesheet" href="style/css/personal.css">
+	<link rel="stylesheet" href="style/css/management.css">
+</head>
+<body>
+	<!-- 院徽 -->	
+	<header>
+		<a href="HomePage.html" class="scie-logo">
+			<img src="style/images/LOGO.png" alt="通信学院院徽">
+		</a>
+		<a href="#" class="login-tab" data-reveal-id="myModal">登录 | Login</a>
+	</header>
+	<!-- 登录弹出层 -->
+	<div id="myModal" class="reveal-modal">
+		<div id="login-tab">
+			<!-- 用户名 -->
+			<div class="text username-container">
+				<input type="text" id="login-username" name="username" placeholder="用户名">
+			</div>
+
+			<!-- 密码 -->
+			<div class="text password-container">
+				<input type="password" id="login-password" name="password" placeholder="密码">
+			</div>
+
+			<!-- 按钮 -->
+			<div class="button-container">
+				<button id="login-button">登录</button>
+			</div>
+		</div>
+    	<!-- 弹出层关闭按钮 -->
+		<a class="close-reveal-modal"><img src="style/images/close.png" alt="关闭" class="close-icon"></a>
+	</div>
+
+	<div id="content-box">
+		<a href="HomePage.html" class="back-to-previous"><span><<</span></a>
+		<!-- 导航菜单 -->
+		<nav>
+			<ul id="tab-menu">
+				<li>
+					<a href="javascript:void(0)" data-tab-index="1" class="current-tab-menu">
+						<span class="icon">
+							<img src="style/images/setting.png" alt="个人设置图标">
+						</span>
+						<span class="menu-text chinese-menu">个人资料</span>
+						<span class="menu-text english-menu">Resume</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)" data-tab-index="2">
+						<span class="icon">
+							<img src="style/images/resume.png" alt="编辑简历图标">
+						</span>
+						<span class="menu-text chinese-menu">简历设计</span>
+						<span class="menu-text english-menu">Resume</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)" data-tab-index="3">
+						<span class="icon">
+							<img src="style/images/achievement.png" alt="编辑研究成果图标">
+						</span>
+						<span class="menu-text chinese-menu">编辑成果</span>
+						<span class="menu-text english-menu">Achievement</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)" data-tab-index="4">
+						<span class="icon">
+							<img src="style/images/paper.png" alt="我的文章图标">
+						</span>
+						<span class="menu-text chinese-menu">文章操作</span>
+						<span class="menu-text english-menu">Paper</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)" data-tab-index="5">
+						<span class="icon">
+							<img src="style/images/resource.png" alt="资源共享图标">
+						</span>
+						<span class="menu-text chinese-menu">资源管理</span>
+						<span class="menu-text english-menu">Resource</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- 个人资料 -->
+		<div class="information-setting content-text-box" id="information-setting" data-content-box-index="1">
+			<!-- 头像 -->
+			<div class="head-box">
+				<img src="style/images/zt.jpg" alt="教师头像" class="head-img">
+				<!-- 头像上传 -->
+				<div class="update-head-box">
+					<span>选择文件</span>
+					<input type="file" class="update-head" accept=".jpg,.jpeg,.gif,.png">
+				</div>
+			</div>
+			<div class="name-box">
+				<span class="name-text">张挺</span>
+			</div>
+			<!-- 职称选择 -->
+			<div class="position-titles-box option-box">
+				<span>职称：</span>
+				<input type="radio" value="教授" name="position-titles" checked="checked"><span>教授</span>
+				<input type="radio" value="副教授" name="position-titles"><span>副教授</span>
+				<input type="radio" value="讲师" name="position-titles"><span>讲师</span>
+				<input type="radio" value="实验师" name="position-titles"><span>实验师</span>
+				<input type="radio" value="工程师" name="position-titles"><span>工程师</span>
+				<input type="radio" value="高级工程师" name="position-titles"><span>高级工程师</span>
+			</div>
+			<!-- 教学职务 -->
+			<div class="duty-box option-box">
+				<span>教学职务：</span>
+				<input type="radio" value="研究生导师" name="duty"><span>研究生导师</span>
+				<input type="radio" value="博士生导师" name="duty"><span>博士生导师</span>
+			</div>
+			<!-- 电子邮箱 -->
+			<div class="email-box option-box">
+				<span>电子邮箱：</span>
+				<div class="email-address-input-box">
+					<input type="text" class="email-address" placeholder="请输入邮箱...">
+				</div>
+			</div>
+			<!-- 保存按钮 -->
+			<div class="save-box">
+				<button class="save-btn" id="update-info">保存修改</button>
+			</div>
+			<!-- 修改密码 -->
+			<div class="change-password-box option-box">
+				<div class="password-box">
+					<span>请输入原密码：</span>
+					<input type="password" class="primary-password">
+				</div>
+				<div class="password-box">
+					<span>请输入新密码：</span>
+					<input type="password" class="new-password">
+				</div>
+				<div class="password-box">
+					<span>请再次输入新密码：</span>
+					<input type="password" class="confirm-new-password">
+				</div>
+			</div>
+			<!-- 保存按钮 -->
+			<div class="save-box">
+				<button class="save-btn" id="change-password">保存修改</button>
+			</div>
+		</div>
+
+		<!-- 简历信息 -->
+		<div class="resume-content-box content-text-box" id="resume-content-box" data-content-box-index="2">
+			<div class="resume-box">
+				<!--style给定宽度可以影响编辑器的最终宽度-->
+				<script type="text/plain" id="myEditor">
+				    <p>这里我可以写一些输入提示</p>
+				</script>
+			</div>
+		</div>
+
+		<!-- 研究成果 -->
+		<div class="achievement-content-box content-text-box" id="achievement-content-box" data-content-box-index="3">
+			<div class="add-box">
+				<button class="add-btn">添加 | Add</button>
+			</div>
+			<ul class="achievement-list-ul">
+				<li>
+					<span>成就成就成就achievement成就成就成就achievement成就成就成就achievement成就成就成就achievement成就成就成就achievement成就成就成就achievement</span>
+					<div class="operation">
+						<a href="javascript:void(0)" class="edit">编辑</a> |
+						<a href="javascript:void(0)" class="delete">删除</a>
+					</div>
+				</li>
+				<li>
+					<span>成就成就成就achievement</span>
+					<div class="operation">
+						<a href="javascript:void(0)" class="edit">编辑</a> |
+						<a href="javascript:void(0)" class="delete">删除</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!-- 我的文章 -->
+		<div class="paper-content-box content-text-box" id="paper-content-box" data-content-box-index="4">
+			<div class="add-box">
+				<button class="add-btn">添加 | Add</button>
+			</div>
+			<ul class="paper-list-ul">
+				<li>
+					<a href="#" class="paper-link">>>我的文章paper我的文章paper我的文章paper我的文章paper我的文章paper我的文章paper我的文章paper我的文章paper我的文章paper我的文章paper我的文章paper我的文章paper我的文章paper
+					</a>
+					<div class="operation">
+						<a href="javascript:void(0)" class="edit">编辑</a> |
+						<a href="javascript:void(0)" class="delete">删除</a>
+					</div>
+				</li>
+				<li><a href="#" class="paper-link">>>我的文章paper</a>
+					<div class="operation">
+						<a href="javascript:void(0)" class="edit">编辑</a> |
+						<a href="javascript:void(0)" class="delete">删除</a>
+					</div>
+				</li>
+				<li><a href="#" class="paper-link">>>我的文章paper</a></li>
+				<li><a href="#" class="paper-link">>>我的文章paper</a></li>
+				<li><a href="#" class="paper-link">>>我的文章paper</a></li>
+				<li><a href="#" class="paper-link">>>我的文章paper</a></li>
+			</ul>		
+		</div>
+
+		<!-- 资源共享 -->
+		<div class="resource-content-box content-text-box active-content-text-box" id="resource-content-box" data-content-box-index="5">
+			<div class="add-box">
+				<button class="add-btn" >添加 | Add</button>
+			</div>
+			
+			<ul class="resource-list-ul">
+				
+				<li>
+					<a href="#" class="resource-link">
+						<span>资源共享Resource资源共享Resource资源共享Resource资源共享Resource资源共享Resource</span>
+					</a>
+					<div class="operation">
+						<a href="javascript:void(0)" class="edit">编辑</a> |
+						<a href="javascript:void(0)" class="delete">删除</a>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="resource-link">
+						<span>资源共享Resource资源共享Resource资源共享Resource资源共享Resource资源共享Resource</span>
+					</a>
+					<div class="operation">
+						<a href="javascript:void(0)" class="edit">编辑</a> |
+						<a href="javascript:void(0)" class="delete">删除</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!-- 底部 -->
+		<footer>
+			&copy; <time>2017</time> 重庆邮电大学通信与信息工程学院  版权所有
+		</footer>
+	</div>
+	<!-- jQuery -->
+	<script src="javascript/jquery.min.js"></script>
+	<!-- 富文本编辑器 -->
+    <script type="text/javascript" src="umeditor/third-party/template.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="umeditor/umeditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="umeditor/umeditor.min.js"></script>
+    <script type="text/javascript" src="umeditor/lang/zh-cn/zh-cn.js"></script>
+	<!-- 登录弹出 -->
+	<script src="javascript/jquery.reveal.js"></script>
+	<!-- header -->
+	<script src="javascript/header.js"></script>
+	<!-- personal -->
+	<script src="javascript/management.js"></script>
+</body>
+</html>

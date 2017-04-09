@@ -14,6 +14,9 @@ public class FileModel {
     private Date uploadTime;
     private String type;
     private int length;
+    private String formatLength;
+    private int download;
+    private String headImgOrFile;
 
     public int getFid() {
         return fid;
@@ -77,6 +80,30 @@ public class FileModel {
 
     public void setLength(int length) {
         this.length = length;
+    }
+
+    public String getHeadImgOrFile() {
+        return headImgOrFile;
+    }
+
+    public void setHeadImgOrFile(String headImgOrFile) {
+        this.headImgOrFile = headImgOrFile;
+    }
+
+    public int getDownload() {
+        return download;
+    }
+
+    public void setDownload(int download) {
+        this.download = download;
+    }
+
+    public String getFormatLength() {
+        return formatLength;
+    }
+
+    public void setFormatLength(String formatLength) {
+        this.formatLength = formatLength;
     }
 
     @Override

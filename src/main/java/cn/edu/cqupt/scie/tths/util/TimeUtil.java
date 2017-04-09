@@ -12,9 +12,12 @@ import java.util.Date;
 
 public class TimeUtil {
     public static String getNowTime() {
-	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-	
-	return sdf.format(new Date());
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        return sdf.format(new Date());
+    }
+    public static String getNowTime2(){
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return sdf.format(new Date());
     }
     
     public static Long getTimestamp() {

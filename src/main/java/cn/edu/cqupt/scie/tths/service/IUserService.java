@@ -1,5 +1,6 @@
 package cn.edu.cqupt.scie.tths.service;
 
+import cn.edu.cqupt.scie.tths.model.MailModel;
 import cn.edu.cqupt.scie.tths.model.UserModel;
 import cn.edu.cqupt.scie.tths.model.json.PageJson;
 import cn.edu.cqupt.scie.tths.model.json.ResponseJson;
@@ -17,4 +18,16 @@ public interface IUserService {
     ResponseJson changeInfo(UserModel userModel);
 
     ResponseJson logout(HttpServletRequest request);
+
+    ResponseJson findTeacherInfo(int uid);
+
+    ResponseJson changePassword(UserModel userModel);
+
+    ResponseJson valiTeacher(String username, HttpServletRequest request);
+
+    ResponseJson sendMail(String username, String email, HttpServletRequest request);
+
+    ResponseJson resetPassword(MailModel mailModel);
+
+    ResponseJson findTeacherJob(String typeName);
 }

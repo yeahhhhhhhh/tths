@@ -1,0 +1,276 @@
+body {
+	background: url(../images/bg_img.jpg) no-repeat fixed;
+	background-size: cover;
+	font-family: '微软雅黑';
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+	height: 122px;
+}
+header {
+	width: 920px;
+	position: relative;
+	margin: 0px auto;
+}
+.scie-logo img{
+	margin: 10px 0px;
+	width: 920px;
+	border: none;
+}
+.login-tab {
+	width: 120px;
+	height: 38px;
+	background-color: rgba(0, 0, 0, 0.85);
+	text-align: center;
+	line-height: 38px;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	-webkit-border-bottom-left-radius: 8px;
+	-moz-border-bottom-left-radius: 8px;
+	-o-border-bottom-left-radius: 8px;
+	-ms-border-bottom-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-bottom-right-radius: 8px;
+	-o-border-bottom-right-radius: 8px;
+	-ms-border-bottom-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+
+	-webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+}
+.login-tab:hover {
+	height: 68px;
+	line-height: 68px;
+	text-decoration: none;
+	color: white;
+	background-color: #17e7a4;
+} 
+
+/*主体内容*/
+#content-box {
+	position: relative;
+	width: 920px;
+	height: 1280px;
+	border: none;
+	margin: 30px auto;
+	background: rgba(0, 0, 0, 0.85);
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	-ms-border-radius: 7px;
+	border-radius: 7px;
+}
+/*侧边栏*/
+.main-left{
+	float: left;
+	width: 199px;
+	height: 1200px;
+	border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+.main-right {
+	height: auto;
+	float: left;
+	width: 720px;
+	/*background-color: rgba(255, 255, 255, 0.5);*/
+}
+/*按职称分类*/
+.index-sort-box {
+	height: 68px;
+	line-height: 68px;
+	text-align: center;
+	font-size: 18px;
+	border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+	color: rgb(255, 255, 255);
+}
+.sort-icon {
+	height: 28px;
+}
+#sidebar-ul li {
+	position: relative;
+	height: 35px;
+}
+#sidebar-ul li a {
+	display: inline-block;
+	width: 196px;
+	height: 35px;
+	font-size: 15px;
+	padding-left: 20px;
+	line-height: 35px;
+	text-decoration: none;
+	text-align: left;
+	color: rgba(255, 255, 255, 0.5);
+}
+#sidebar-ul li a:before {
+	content: "";
+	position: absolute;
+	top: 33px;
+	left: 0px;
+	width: 0px;
+	height: 2px;
+	background-color: rgb(70, 186, 215);
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	-o-transition: all ease 0.3s;
+	-ms-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+}
+#sidebar-ul li a:hover {
+	color: rgba(255, 255, 255, 1);
+}
+#sidebar-ul li a:hover:before {
+	width: 100%;
+}
+/*编辑分类（管理员登录后）*/
+.edit-sort a {
+	font-size: 18px !important;
+	color: white !important;
+	text-align: center !important;
+	/*border: 1px solid blue;*/
+}
+/*右边内容部分*/
+.search-box {
+	width: 600px;
+	height: 68px;
+	float: left;
+	/*border: 1px solid red;*/
+}
+.search-box-icon {
+	width: 18px;
+	height: 18px;
+}
+.add-teacher-box {
+	float: left;
+}
+.add-teacher-box a {
+	width: 100px;
+	height: 68px;
+	line-height: 68px;
+	font-size: 16px;
+	text-decoration: none;
+	color: white;
+}
+.add-teacher-box a:hover {
+	text-decoration: none;
+} 
+.add-teacher-box img {
+	margin-left: 3px;
+}
+/*搜索栏样式，覆盖boostrap部分样式*/
+.row {
+	margin-left:100px;
+	margin-top: 10px;
+}
+.col-lg-6 {
+	width: 500px;
+	height: 50px;
+}
+.form-control,.btn {
+	opacity: 0.9;
+	height: 46px;
+	border: 2px solid #ccc;
+	font-size: 16px;
+}
+.form-control:focus {
+	border: 2px solid rgb(70, 186, 215);
+}
+.btn:focus {
+	border: 2px solid rgba(23, 231, 164, 0.8);
+}
+/*教师列表*/
+.teacher-list-box {
+	width: 720px;
+	height: 1060px;
+	/*border: 1px solid red;*/
+}
+.teacher-block {
+	float: left;
+	width: 176px;
+	height: 188px;
+	/*border: 1px solid blue;*/
+	padding-left: 25px;
+	margin: 10px 0px;
+}
+.teacher-block a {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.5);
+	/*border: 1px solid yellow;*/
+}
+.teacher-block a:hover {
+	color: rgba(255, 255, 255, 1);
+} 
+.teacher-block img {
+	height: 164px;
+	width: 126px;
+	border: 1px solid rgb(70, 186, 215);
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-ms-border-radius: 7px;
+	-o-border-radius: 7px;
+	border-radius: 7px;
+}
+.teacher-name {
+	margin-top: 5px;
+}
+/*分页样式*/
+.pagination-box {
+	margin-top: 55px;
+	height: 50px;
+	/*border: 1px solid yellow;*/
+	position: relative;
+}
+.pagination {
+	opacity: 0.9;
+	height: 36px;
+	width: 380px;
+	display: inline-block;
+	padding-left: 0;
+	margin: 0px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+footer {
+	/*border: 1px solid red;*/
+	height: 80px;
+	width: 100%;
+	padding: 20px 0px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+	background-color: #000;
+	position: absolute;
+	bottom: 0;
+	color: white;
+	-webkit-border-bottom-left-radius: 8px;
+	-moz-border-bottom-left-radius: 8px;
+	-o-border-bottom-left-radius: 8px;
+	-ms-border-bottom-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-bottom-right-radius: 8px;
+	-o-border-bottom-right-radius: 8px;
+	-ms-border-bottom-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+}

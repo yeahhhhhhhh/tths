@@ -7,11 +7,13 @@ import cn.edu.cqupt.scie.tths.model.FileModel;
 import cn.edu.cqupt.scie.tths.model.UserModel;
 import cn.edu.cqupt.scie.tths.model.json.ResponseJson;
 import cn.edu.cqupt.scie.tths.service.IFileService;
+import cn.edu.cqupt.scie.tths.util.FileSizeUtil;
 import cn.edu.cqupt.scie.tths.util.IOUtil;
 import cn.edu.cqupt.scie.tths.util.ResponseHandelUtil;
 import cn.edu.cqupt.scie.tths.util.TimeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
@@ -25,6 +27,7 @@ import java.util.List;
 /**
  * Created by why on 2017/3/11.
  */
+@Transactional
 @Service
 public class FileService implements IFileService{
 
@@ -62,8 +65,10 @@ public class FileService implements IFileService{
                 //判断该文件是否为空
                 if(file == null || file.isEmpty())
                     return new ResponseJson(StatusCodeConstant.INVALID_REQUEST);
+
+
                 //获取路径
-                String path = request.getServletContext().getRealPath("upload");
+                String path = request.getServletContext().getRealPath("uploads");
                 System.out.println("path:"+path);
 
                 //获取日期
@@ -88,29 +93,54 @@ public class FileService implements IFileService{
                 String realName = System.currentTimeMillis()+"."+type;
                 System.out.println("realName:"+realName);
 
+                String savePath = null;
+                int result;
+                //判断是上传头像还是普通文件
+                if(request.getParameter("headImgOrFile").equals("head_img")){
+                    //文件存储路径
+                    savePath = path + "/head_imgs/" + date;
+                    System.out.println(savePath);
+
+                    //将数据封装到usermodel
+                    userModel.setAvator("uploads/head_imgs/"+date+"/"+realName);
+                    result = fileDao.uploadHeadImg(userModel);
+
+                }else if(request.getParameter("headImgOrFile").equals("file")){
+                    //文件存储路径
+                    savePath = path + "/file/" + date;
+                    System.out.println(savePath);
+
+                    //将数据封装到FileModel
+                    FileModel fileModel = new FileModel();
+                    fileModel.setFileName(fileName);
+                    fileModel.setRealName(realName);
+                    fileModel.setType(type);
+                    fileModel.setLength(length);
+                    fileModel.setUid(uid);
+                    fileModel.setFileUploader(userModel.getUsername());
+
+                    result = fileDao.uploadFile(fileModel);
+                    System.out.println(result);
+                }else {
+                    return new ResponseJson(StatusCodeConstant.INVALID_REQUEST);
+                }
+
                 //文件存储路径
-                String savePath = path + "/" + date;
-                System.out.println(savePath);
+//                String savePath = path + "/" + date;
+//                System.out.println(savePath);
 
                 //判断该文件夹是否存在
                 File localFile = new File(savePath,realName);
                 if(!localFile.exists())
                     localFile.mkdirs();
+                localFile.setWritable(true,false);
                 file.transferTo(localFile);
 
-                //将数据封装到FileModel
-                FileModel fileModel = new FileModel();
-                fileModel.setFileName(fileName);
-                fileModel.setRealName(realName);
-                fileModel.setType(type);
-                fileModel.setLength(length);
-                fileModel.setUid(uid);
-                fileModel.setFileUploader(userModel.getUsername());
-
-                int result = fileDao.uploadFile(fileModel);
-                System.out.println(result);
-
-                return new ResponseJson(StatusCodeConstant.OK);
+                if(result == 1){
+                    return new ResponseJson(StatusCodeConstant.OK);
+                }else {
+                    return new ResponseJson(StatusCodeConstant.INTERNAL_SERVER_ERROR);
+                }
             }
         }else {
             return new ResponseJson(StatusCodeConstant.USER_UNLOGIN);
@@ -131,7 +161,7 @@ public class FileService implements IFileService{
         if(fileList.size() == 0)
             return new ResponseJson(StatusCodeConstant.INVALID_REQUEST);
         //获取路径
-        String path = request.getServletContext().getRealPath("upload");
+        String path = request.getServletContext().getRealPath("uploads");
         //创建一个list用于装fileModel的集合
         List<FileModel> fileModelList = new LinkedList<FileModel>();
         for(int i = 0; i < fileList.size(); i++){
@@ -222,7 +252,7 @@ public class FileService implements IFileService{
         String date = sdf.format(fileModel.getUploadTime());
         System.out.println(date);
         //获取文件路径
-        String filePath = request.getServletContext().getRealPath("upload")+"/"+date+"/"+fileModel.getRealName();
+        String filePath = request.getServletContext().getRealPath("uploads/file/")+date+"/"+fileModel.getRealName();
         try {
             //获取输入输出流
             InputStream is = new FileInputStream(filePath);
@@ -255,7 +285,7 @@ public class FileService implements IFileService{
         //获取realName
         String realName = fileByfid.getRealName();
         //获取路径
-        String path = request.getServletContext().getRealPath("upload")+"/"+date+"/"+realName;
+        String path = request.getServletContext().getRealPath("uploads")+"/"+date+"/"+realName;
         File file = new File(path);
         if(file.exists()){
             file.delete();
@@ -263,5 +293,17 @@ public class FileService implements IFileService{
         return new ResponseJson(StatusCodeConstant.OK);
     }
 
+    @Override
+    public ResponseJson findFileList(int uid) {
+        List<FileModel> fileModelList = fileDao.findFileList(uid);
+        if(fileModelList != null){
+            for(FileModel fileModel : fileModelList){
+                fileModel.setFormatLength(FileSizeUtil.convertFileSize(fileModel.getLength()));
+            }
+        }
+        ResponseJson responseJson = new ResponseJson(StatusCodeConstant.OK);
+        responseJson.setBody(fileModelList);
+        return responseJson;
+    }
 
 }

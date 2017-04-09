@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="cn.edu.cqupt.scie.tths.dao.impl.mybatis.AdminMapper">
+    <resultMap id="AdminResultMap" type="cn.edu.cqupt.scie.tths.model.AdminModel">
+        <id column="id" property="uid"/>
+    </resultMap>
+    <select id="findAdminByUsername" parameterType="AdminModel" resultMap="AdminResultMap">
+        select * from tth_admin where username = #{username}
+    </select>
+
+    <insert id="addNewTeachers" parameterType="UserModel">
+        insert into tth_user(username,password) values(#{username},#{password})
+    </insert>
+
+    <update id="addTeacherType" parameterType="string">
+        update tth_config set value = CONCAT(value,',',#{newType}) where name = #{typeName}
+    </update>
+
+    <update id="deleteTeacherType" parameterType="string">
+        update tth_config set value = #{jobStr} where name = #{typeName}
+    </update>
+
+    <insert id="addLoginLog" parameterType="AdminModel">
+        insert into tth_loginlog(aid,lastlogin_ip,lastlogin_time) values(#{uid},#{lastlogin_ip},now())
+    </insert>
+
+    <update id="addLoginCount" parameterType="AdminModel">
+        update tth_admin set visit_count = visit_count + 1 where id = #{uid}
+    </update>
+</mapper>

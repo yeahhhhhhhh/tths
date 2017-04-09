@@ -1,5 +1,6 @@
 package cn.edu.cqupt.scie.tths.dao;
 
+import cn.edu.cqupt.scie.tths.model.MailModel;
 import cn.edu.cqupt.scie.tths.model.UserModel;
 import cn.edu.cqupt.scie.tths.model.json.PageJson;
 import org.springframework.stereotype.Repository;
@@ -20,4 +21,30 @@ public interface IUserDao {
     int changeInfo(UserModel userModel);
 
     UserModel findUserByUid(int uid);
+
+    UserModel findTeacherInfo(int uid);
+
+    int changePassword(UserModel userModel);
+
+    UserModel findTeacherByUsername(String username);
+
+    void updateDigitalSignatureAndOutdate(MailModel mailModel);
+
+    List<String> findEmails();
+
+    MailModel findMailModel(MailModel mailModel);
+
+    void resetPassword(MailModel mailModel);
+
+    String findTeacherJob(String typeName);
+
+    void changeStatusByAdd(String username);
+
+    void changeStatusByDelete(String username);
+
+    void addLoginCount(int uid);
+
+    List<UserModel> findLeftTeachers(int begin, int count, String username);
+
+    int findLeftTeachersCount(String username);
 }

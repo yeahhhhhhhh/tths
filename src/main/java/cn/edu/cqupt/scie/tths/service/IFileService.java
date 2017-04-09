@@ -20,4 +20,6 @@ public interface IFileService {
     ResponseJson fileDownload(HttpServletRequest request, HttpServletResponse response,int fid) throws UnsupportedEncodingException;
 
     ResponseJson fileDelete(FileModel fileModel, HttpServletRequest request);
+
+    ResponseJson findFileList(int uid);
 }

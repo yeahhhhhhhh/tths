@@ -18,8 +18,12 @@ public class UserModel {
     private String achievement;
     private String resume;
     private String college;
-    private String status;
+    private Integer status;
     private String role;
+    private int loginCount;
+
+    private String newPassword;
+    private String newPassword2;
 
     public int getUid() {
         return uid;
@@ -133,11 +137,11 @@ public class UserModel {
         this.college = college;
     }
 
-    public String getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
@@ -147,5 +151,29 @@ public class UserModel {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getNewPassword() {
+        return newPassword;
+    }
+
+    public void setNewPassword(String newPassword) {
+        this.newPassword = newPassword;
+    }
+
+    public String getNewPassword2() {
+        return newPassword2;
+    }
+
+    public void setNewPassword2(String newPassword2) {
+        this.newPassword2 = newPassword2;
+    }
+
+    public int getLoginCount() {
+        return loginCount;
+    }
+
+    public void setLoginCount(int loginCount) {
+        this.loginCount = loginCount;
     }
 }

@@ -18,6 +18,11 @@ public class ResponseJson {
         this.message = statusCodeConstant.getMessage();
     }
 
+    public ResponseJson(Integer code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+
     public Integer getCode() {
         return code;
     }

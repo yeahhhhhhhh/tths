@@ -9,5 +9,7 @@
         <typeAlias type="cn.edu.cqupt.scie.tths.model.FileModel" alias="FileModel"/>
         <typeAlias type="cn.edu.cqupt.scie.tths.model.json.PageJson" alias="PageJson"/>
         <typeAlias type="cn.edu.cqupt.scie.tths.model.UserModel" alias="UserModel"/>
+        <typeAlias type="cn.edu.cqupt.scie.tths.model.AdminModel" alias="AdminModel"/>
+        <typeAlias type="cn.edu.cqupt.scie.tths.model.MailModel" alias="MailModel"/>
     </typeAliases>
 </configuration>

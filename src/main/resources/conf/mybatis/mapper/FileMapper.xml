@@ -20,4 +20,12 @@
     <update id="addDownLoadCount" parameterType="int">
         update tth_file set download = download+1 where fid = #{fid}
     </update>
+
+    <update id="uploadHeadImg" parameterType="UserModel">
+        update tth_user set avator = #{avator} where id = #{uid}
+    </update>
+
+    <select id="findFileList" parameterType="int" resultType="FileModel">
+        select fid,fileName,uploadTime,type,length,download from tth_file where uid = #{uid}
+    </select>
 </mapper>

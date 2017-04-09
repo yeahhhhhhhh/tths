@@ -18,4 +18,10 @@ public interface UserMapper extends IUserDao {
 
     @Override
     int findTeachersCount(@Param("teacher_title") String teacher_title,@Param("teacher_job") String teacher_job,@Param("username") String username);
+
+    @Override
+    List<UserModel> findLeftTeachers(@Param("begin") int begin,@Param("count") int count, @Param("username")String username);
+
+    @Override
+    int findLeftTeachersCount(@Param("username") String username);
 }

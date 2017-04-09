@@ -1,0 +1,263 @@
+/*个人资料*/
+.head-box {
+	height: 190px;
+	/*border: 1px solid red;*/
+}
+.update-head-box {
+	position: relative;
+	text-align: center;
+	width: 100px;
+	height: 25px;
+	line-height: 25px;
+	margin: 5px auto;
+}
+.update-head-box span {
+	display: inline-block;
+	width: 100px;
+	height: 25px;
+	color: white;
+	font-size: 15px;
+	line-height: 25px;
+	background-color: #17e7a4;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+.update-head {
+	width: 100px;
+	height: 25px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*border: 1px solid blue;*/
+	background-color: white;
+	z-index: 99;
+	font-size: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+.name-box {
+	margin-bottom: 40px;
+}
+/*职称、教学职务、邮箱样式*/
+.option-box,.save-box {
+	width: 740px;
+	min-height: 28px;
+	line-height: 28px;
+	/*border: 1px solid blue;*/
+	margin: 12px auto;
+	color: white;
+}
+.option-box span {
+	font-size: 16px;
+	display: inline-block;
+	width: 80px;
+}
+.option-box span:first-child {
+	font-size: 20px;
+	/*display: inline-block;*/
+	float: left;
+	width: 120px;
+}
+.option-box input {
+	display: inline-block;
+	margin-right: 3px;
+}
+.email-address-input-box {
+	float: left;
+	position: relative;
+}
+.email-address {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 26px;
+	background-color: rgba(255, 255, 255, 0.9);
+	font-size: 16px;
+	line-height: 26px;
+	padding-left: 5px;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+/*修改密码*/
+.change-password-box {
+	border-top: 2px dashed #ccc;
+	padding-top: 8px;
+}
+.password-box {
+	margin: 10px 0;
+}
+.password-box span {
+	display: inline-block;
+	width: 200px !important;
+}
+.password-box input {
+	width: 300px;
+	height: 26px;
+	background-color: rgba(255, 255, 255, 0.9);
+	font-size: 16px;
+	line-height: 26px;
+	padding-left: 5px;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+/*保存按钮*/
+.save-btn,.cancel-btn,.add-btn {
+	/*display: block;*/
+	width: 100px;
+	height: 30px;
+	margin: 18px 0;
+	line-height: 28px;
+	font-size: 16px;
+	color: white;
+	border: none;
+	background-color: #17e7a4;
+	cursor: pointer;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+/*富文本编辑器样式*/
+.resume-box {
+	border: 1px solid blue;
+}
+#myEditor {
+	width: 870px;
+	height: 400px;
+	/*opacity: 0.9;*/
+	border: 1px solid red;
+}
+
+
+/*编辑成果*/
+.achievement-list-ul li span {
+	display: inline-block;
+	width: 695px;
+	height: 26px;
+	overflow: hidden;
+	/*float: left;*/
+	/*border: 1px solid red;*/
+}
+.operation {
+	width: 120px;
+	float: right;
+	color: white;
+	/*border: 1px solid red;*/
+}
+.operation a {
+	display: inline-block;
+	width: 50px;
+	height: 26px;
+	line-height: 26px;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: center;
+	color: rgba(255, 255, 255, 1);
+}
+.operation a:hover {
+	text-decoration: none;
+}
+.operation .delete:hover {
+	color: rgba(255, 0, 0, 0.7);
+}
+.add-box {
+	/*border: 1px solid red;*/
+	text-align: right;
+	text-align: center;
+}
+
+/*文章操作*/
+.paper-list-ul li .paper-link {
+	width: 720px;
+}
+.paper-link {
+	display: inline-block;
+	width: 690px;
+	/*border: 1px solid yellow;*/
+}
+.paper-list-ul .operation a {
+	display: inline-block;
+	height: 30px;
+	margin: 5px 0;
+	line-height: 30px;
+}
+/*资源管理*/
+.resource-link {
+	width: 720px !important;
+	/*border: 1px solid blue;*/
+}
+.resource-link span {
+	display: inline-block;
+	/*border: 1px solid red;*/
+	width: 720px !important;
+	height: 30px;
+}
+.resource-list-ul .operation a {
+	width: 50px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 18px;
+	color: white;
+	/*border: 1px solid white;*/
+}
+.add-resource-box {
+	height: 60px;
+	/*border: 1px solid red;*/
+}
+.add-resource-title {
+	height: 25px;
+	width: 700px;
+	background-color: rgba(255, 255, 255, 0.9);
+	font-size: 16px;
+	line-height: 26px;
+	padding-left: 5px;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+.add-resource-file {
+	/*display: block;*/
+	color: white;
+	height: 28px;
+	width: 600px;
+	margin-top: 4px;
+}
+.operation-btn-box {
+	float: right;
+	/*border: 1px solid blue;*/
+	margin-top: -20px;
+}
+.operation-btn-box button {
+	width: 50px;
+	height: 30px;
+	margin-right: 8px;
+	cursor: pointer;
+	color: white;
+	font-size: 16px;
+	background: #17e7a4;
+	border: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}

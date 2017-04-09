@@ -16,7 +16,13 @@ public enum StatusCodeConstant {
     UNPROCESABLE_ENTITY(422,"UNPROCESABLE_ENTITY"),//创建对象时验证错误
     INTERNAL_SERVER_ERROR(500,"INTERNAL_SERVER_ERROR"),//服务器内部错误
     USER_NOT_EXIST(1000,"用户不存在"),
+    EMAIL_NOT_EXIST(1001,"该用户未填写邮箱"),
+    EMAIL_EXISTED(1002,"该邮箱已被占用"),
     USER_UNLOGIN(1003,"用户未登录"),
+    CODE_ERROR(1004,"数字签名错误"),
+    TIME_OUT(1005,"签名已过期"),
+    CONFIG_EXISTED(1006,"该配置已存在"),
+    CONFIG_NOT_EXIST(1007,"该配置不存在"),
     TOKEN_NOT_EXIST(2000,"token not exist"),
     JSON_PARSE_ERROR(4000,"JSON PARSE ERROR");
     private int code;

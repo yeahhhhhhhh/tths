@@ -5,10 +5,11 @@
     <resultMap id="TeacherResultMap" type="cn.edu.cqupt.scie.tths.model.UserModel">
         <id column="id" property="uid"/>
     </resultMap>
+
     <select id="findTeachers" resultMap="TeacherResultMap">
-        select * from tth_user
+        select id,username,avator from tth_user
          <where>
-             1 = 1
+             status = 1
              <if test="teacher_title != null">
                  and teacher_title = #{teacher_title}
              </if>
@@ -25,7 +26,7 @@
     <select id="findTeachersCount" resultType="int">
         select count(*) from tth_user
         <where>
-            1 = 1
+            status = 1
             <if test="teacher_title != null">
                 and teacher_title = #{teacher_title}
             </if>
@@ -59,5 +60,69 @@
 
     <select id="findUserByUid" parameterType="int" resultMap="TeacherResultMap">
         select * from tth_user where id = #{uid}
+    </select>
+
+    <select id="findTeacherInfo" parameterType="int" resultMap="TeacherResultMap">
+        select * from tth_user where id = #{uid}
+    </select>
+
+    <update id="changePassword" parameterType="UserModel">
+        update tth_user set password = #{newPassword} where id = #{uid}
+    </update>
+
+    <select id="findTeacherByUsername" parameterType="string" resultMap="TeacherResultMap">
+        select username,email,status from tth_user where username = #{username}
+    </select>
+
+    <update id="updateDigitalSignatureAndOutdate" parameterType="MailModel">
+        update tth_user set validatacode = #{validatacode},outdate = #{outdate} where username = #{username}
+    </update>
+
+    <select id="findEmails" resultType="string">
+        SELECT email FROM tth_user WHERE email != ''
+    </select>
+
+    <select id="findMailModel" parameterType="MailModel" resultType="MailModel">
+        select validatacode,outdate from tth_user where username=#{username}
+    </select>
+
+    <update id="resetPassword" parameterType="MailModel">
+        update tth_user set password = #{newPassword} where username = #{username}
+    </update>
+
+    <select id="findTeacherJob" resultType="string" parameterType="string">
+        select value from tth_config where name = #{typeName}
+    </select>
+
+    <update id="changeStatusByAdd" parameterType="string">
+        update tth_user set status = 1 where username = #{username}
+    </update>
+    <update id="changeStatusByDelete" parameterType="string">
+        update tth_user set status = 0 where username = #{username}
+    </update>
+
+    <update id="addLoginCount" parameterType="int">
+        update tth_user set loginCount = loginCount + 1 where id = #{uid}
+    </update>
+
+    <select id="findLeftTeachers" resultMap="TeacherResultMap" >
+        select id,username,avator from tth_user
+        <where>
+            status = 0
+            <if test="username != null">
+                and username like #{username}
+            </if>
+        </where>
+        limit #{begin},#{count}
+    </select>
+
+    <select id="findLeftTeachersCount" resultType="int">
+        select count(*) from tth_user
+        <where>
+            status = 0
+            <if test="username != null">
+                and username like #{username}
+            </if>
+        </where>
     </select>
 </mapper>

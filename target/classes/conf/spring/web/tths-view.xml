@@ -32,5 +32,7 @@
 		</property>
 	</bean>
 
+	<mvc:resources location="/html/" mapping="/html/**"/>
+	<mvc:resources location="/uploads/" mapping="/uploads/**"/>
 
 </beans>
