@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="cn.edu.cqupt.scie.tths.dao.impl.mybatis.ArticleMapper">
+    <insert id="saveArticle" useGeneratedKeys="true" keyProperty="id" parameterType="ArticleModel">
+        insert into
+         tth_article(cid,uid,title,profile,body,status,time_update)
+         values
+         (#{cid},#{uid},#{title},#{profile},#{body},#{status},#{timeUpdate});
+    </insert>
+
+    <update id="updateArticle" parameterType="ArticleModel">
+        UPDATE tth_article
+        <set>
+            <trim suffixOverrides=",">
+                <if test="title!=null and !&quot;&quot;.equals(title.trim())">
+                    title=#{title},
+                </if>
+                <if test="profile!=null and !&quot;&quot;.equals(profile.trim())">
+                    profile=#{profile},
+                </if>
+                <if test="body!=null and !&quot;&quot;.equals(body.trim())">
+                    body=#{body},
+                </if>
+                time_update=#{timeUpdate},
+            </trim>
+            WHERE id=#{id}
+        </set>
+    </update>
+
+    <delete id="deleteArticle" >
+        DELETE FROM tth_article WHERE id=#{id}
+    </delete>
+
+    <select id="getArticle" resultType="ArticleModel">
+        select
+          a.id,
+          a.uid,
+          a.cid,
+          c.name,
+          a.title,
+          a.profile,
+          a.body,
+          a.status,
+          a.time_update,
+          a.comment,
+          a.count,
+          a.star,
+          a.top
+         from tth_article a
+          LEFT JOIN page_category c
+          ON a.cid=c.id
+          where a.id = #{id}
+    </select>
+
+    <select id="getArticleList" resultType="ArticleModel" parameterType="Page">
+        select
+          a.id,
+          a.uid,
+          a.cid,
+          c.name,
+          a.title,
+          a.profile,
+          a.status,
+          a.time_update,
+          a.comment,
+          a.count,
+          a.star,
+          a.top
+         from tth_article a
+          LEFT JOIN page_category c
+         ON a.cid=c.id
+          <where>
+              <if test="uid!=@cn.edu.cqupt.scie.tths.constant.ArticleConstant@ALL_UID.getStatus()">
+                  AND a.uid=#{uid}
+              </if>
+              <if test="cid!=@cn.edu.cqupt.scie.tths.constant.ArticleConstant@ALL_CID.getStatus()">
+                  AND a.cid=#{cid}
+              </if>
+              <if test="searchString!=null and !&quot;&quot;.equals(searchString.trim())">
+                  AND a.title LIKE "%"#{searchString}"%"
+              </if>
+          </where>
+        ORDER BY top DESC ,time_update DESC
+        LIMIT #{page.dbIndex},#{page.dbNumber}
+    </select>
+
+    <select id="getArticleListCount" resultType="int">
+        select
+          COUNT(*)
+         from tth_article
+        <where>
+            <if test="uid!=@cn.edu.cqupt.scie.tths.constant.ArticleConstant@ALL_UID.getStatus()">
+                uid=#{uid}
+            </if>
+            <if test="cid!=@cn.edu.cqupt.scie.tths.constant.ArticleConstant@ALL_CID.getStatus()">
+                cid=#{cid}
+            </if>
+            <if test="searchString!=null and !&quot;&quot;.equals(searchString.trim())">
+                title LIKE "%"#{searchString}"%"
+            </if>
+        </where>
+    </select>
+
+    <delete id="deleteArticleByUid" parameterType="int">
+        DELETE from tth_article where uid = #{uid}
+    </delete>
+
+    <delete id="deleteCategoryByUid" parameterType="int">
+        delete from page_category where uid = #{uid}
+    </delete>
+</mapper>
