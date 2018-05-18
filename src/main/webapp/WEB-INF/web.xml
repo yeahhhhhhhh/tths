@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         id="WebApp_ID" version="3.1">
+  <welcome-file-list>
+    <!--<welcome-file>/html/HomePage.html</welcome-file>-->
+    <welcome-file>/</welcome-file>
+  </welcome-file-list>
+  <!-- 注册springmvc核心控制器 -->
+  <servlet>
+    <servlet-name>DispatcherServlet</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:conf/spring/web/*.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DispatcherServlet</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.html</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.HTML</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.png</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.PNG</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.jpg</url-pattern>
+  </servlet-mapping>
+  <!--<servlet-mapping>-->
+    <!--<servlet-name>default</servlet-name>-->
+    <!--<url-pattern>*.JPG</url-pattern>-->
+  <!--</servlet-mapping>-->
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.js</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.JS</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.css</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.CSS</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.gif</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.GIF</url-pattern>
+  </servlet-mapping>
+
+  <filter>
+    <filter-name>AccessFilter</filter-name>
+    <filter-class>cn.edu.cqupt.scie.tths.filter.AccessFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AccessFilter</filter-name>
+    <url-pattern>/</url-pattern>
+  </filter-mapping>
+
+  <!-- 注册springmvc核心编码过滤器 -->
+  <filter>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+   <!--验证是否已登录 -->
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>cn.edu.cqupt.scie.tths.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/user/changeInfo</url-pattern>
+    <url-pattern>/file/fileDelete</url-pattern>
+    <url-pattern>/article_user/*</url-pattern>
+    <url-pattern>/admin/*</url-pattern>
+  </filter-mapping>
+
+  <!-- 应用上下文配置 -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:conf/spring/app/*.xml</param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+
+  <context-param>
+    <param-name>webAppRootKey</param-name>
+    <param-value>tths.root</param-value>
+  </context-param>
+
+  <context-param>
+    <!--log4j配置地址 -->
+    <param-name>log4jConfigLocation</param-name>
+    <!-- <param-value>/WEB-INF/classes/log4j.properties</param-value> -->
+    <param-value>classpath:log4j.properties</param-value>
+  </context-param>
+  <context-param>
+    <!-- log4j 配置扫描刷新间隔 可以不用 -->
+    <param-name>log4jRefreshInterval</param-name>
+    <param-value>10000</param-value>
+  </context-param>
+  <!-- spring里的log4j配置监听器 -->
+  <listener>
+    <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+  </listener>
+
+</web-app>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="cn.edu.cqupt.scie.tths.dao.impl.mybatis.FileMapper">
+    <insert id="uploadFile" parameterType="FileModel">
+        insert into tth_file(uid,fileUploader,fileName,realName,type,length) values(#{uid},#{fileUploader},#{fileName},#{realName},#{type},#{length});
+    </insert>
+
+    <insert id="uploadFiles" parameterType="java.util.List">
+        insert into tth_file(fileName,realName,type,length) values
+        <foreach collection="list" item="file" separator=",">
+            (#{file.fileName},#{file.realName},#{file.type},#{file.length})
+        </foreach>
+    </insert>
+
+    <select id="findFileByFid" resultType="FileModel" parameterType="int">
+        select * from tth_file where fid = #{fid}
+    </select>
+
+    <update id="addDownLoadCount" parameterType="int">
+        update tth_file set download = download+1 where fid = #{fid}
+    </update>
+
+    <update id="uploadHeadImg" parameterType="UserModel">
+        update tth_user set avator = #{avator} where id = #{uid}
+    </update>
+
+    <select id="findFileList" parameterType="int" resultType="FileModel">
+        select fid,fileUploader,fileName,uploadTime,type,length,download from tth_file where uid = #{uid}
+    </select>
+
+    <delete id="deleteFilesByUid" parameterType="int">
+        delete from tth_file where uid = #{uid}
+    </delete>
+
+    <select id="findFileListByPage" resultType="FileModel">
+        select fid,fileUploader,fileName,uploadTime,type,length,download from tth_file where uid = #{uid} order by uploadTime desc limit #{begin},#{listCount}
+    </select>
+
+    <select id="findFileCountByUid" parameterType="int" resultType="int">
+        select count(*) from tth_file where uid = #{uid}
+    </select>
+
+    <delete id="deleteFilesByFid" parameterType="int">
+        delete from tth_file where fid = #{fid}
+    </delete>
+</mapper>

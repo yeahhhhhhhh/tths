@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="cn.edu.cqupt.scie.tths.dao.impl.mybatis.UserMapper">
+    <resultMap id="TeacherResultMap" type="cn.edu.cqupt.scie.tths.model.UserModel">
+        <id column="id" property="uid"/>
+        <result column="teacher_title" property="teacher_title"/>
+        <result column="teacher_job" property="teacher_job"/>
+        <result column="teacher_job2" property="teacher_job2"/>
+    </resultMap>
+
+    <select id="findTeachers" resultMap="TeacherResultMap">
+        select id,username,avator from tth_user
+         <where>
+             status = 1
+             <if test="teacher_title != null">
+                 and teacher_title = #{teacher_title}
+             </if>
+             <if test="teacher_job != null">
+                 and teacher_job = #{teacher_job}
+             </if>
+             <if test="username != null">
+                 and username like #{username}
+             </if>
+             <if test="py_name != null">
+                 and py_name like #{py_name}
+             </if>
+         </where>
+         order by py_name limit #{begin},#{count}
+    </select>
+
+    <select id="findTeachersCount" resultType="int">
+        select count(*) from tth_user
+        <where>
+            status = 1
+            <if test="teacher_title != null">
+                and teacher_title = #{teacher_title}
+            </if>
+            <if test="teacher_job != null">
+                and teacher_job = #{teacher_job}
+            </if>
+            <if test="username != null">
+                and username like #{username}
+            </if>
+            <if test="py_name != null">
+                and py_name like #{py_name}
+            </if>
+        </where>
+    </select>
+
+    <select id="findUserByUsername" resultMap="TeacherResultMap" parameterType="UserModel">
+        select * from tth_user where username=#{username}
+    </select>
+
+    <select id="findUserByEmail" resultMap="TeacherResultMap" parameterType="UserModel">
+        select * from tth_user where email=#{email}
+    </select>
+
+    <update id="changeInfo" parameterType="UserModel">
+        update tth_user 
+        <set>
+            <if test="email != null">email = #{email},</if>
+            <if test="number != null">number = #{number},</if>
+            <if test="postal_address != null">postal_address = #{postal_address},</if>
+            <if test="achievement != null">achievement = #{achievement},</if>
+            <if test="resume != null">resume = #{resume},</if>
+            <if test="teacher_title != null">teacher_title = #{teacher_title},</if>
+            <if test="teacher_job != null">teacher_job = #{teacher_job},</if>
+            <if test="teacher_job2 != null">teacher_job2 = #{teacher_job2},</if>
+        </set>
+        where id = #{uid}
+    </update>
+
+    <select id="findUserByUid" parameterType="int" resultMap="TeacherResultMap">
+        select * from tth_user where id = #{uid}
+    </select>
+
+    <select id="findTeacherInfo" parameterType="int" resultMap="TeacherResultMap">
+        select * from tth_user where id = #{uid}
+    </select>
+
+    <update id="changePassword" parameterType="UserModel">
+        update tth_user set password = #{newPassword} where id = #{uid}
+    </update>
+
+    <select id="findTeacherByUsername" parameterType="string" resultMap="TeacherResultMap">
+        select id,username,email,status from tth_user where username = #{username}
+    </select>
+
+    <update id="updateDigitalSignatureAndOutdate" parameterType="MailModel">
+        update tth_user set validatacode = #{validatacode},outdate = #{outdate} where username = #{username}
+    </update>
+
+    <select id="findEmails" resultType="string">
+        SELECT email FROM tth_user WHERE email != ''
+    </select>
+
+    <select id="findMailModel" parameterType="MailModel" resultType="MailModel">
+        select validatacode,outdate from tth_user where username=#{username}
+    </select>
+
+    <update id="resetPassword" parameterType="MailModel">
+        update tth_user set password = #{newPassword} where username = #{username}
+    </update>
+
+    <select id="findTeacherJob" resultType="string" parameterType="string">
+        select value from tth_config where name = #{typeName}
+    </select>
+
+    <update id="changeStatusByAdd" parameterType="string">
+        update tth_user set status = 1 where username = #{username}
+    </update>
+    <update id="changeStatusByDelete" parameterType="string">
+        update tth_user set status = 0 where username = #{username}
+    </update>
+
+    <update id="addLoginCount" parameterType="int">
+        update tth_user set loginCount = loginCount + 1 where id = #{uid}
+    </update>
+
+    <select id="findLeftTeachers" resultMap="TeacherResultMap" >
+        select id,username,avator from tth_user
+        <where>
+            status = 0
+            <if test="username != null">
+                and username like #{username}
+            </if>
+        </where>
+        limit #{begin},#{count}
+    </select>
+
+    <select id="findLeftTeachersCount" resultType="int">
+        select count(*) from tth_user
+        <where>
+            status = 0
+            <if test="username != null">
+                and username like #{username}
+            </if>
+        </where>
+    </select>
+
+    <delete id="forceDeleteTeacherByUsername" parameterType="string">
+        delete from tth_user where username = #{username}
+    </delete>
+
+    <select id="findAdminEmail" resultType="string">
+        select email from tth_admin
+    </select>
+
+    <insert id="saveMsg" parameterType="string">
+        insert into tth_msg(msg) values(#{msg})
+    </insert>
+
+    <update id="offTeachersAll">
+        update tth_user set status = 0
+    </update>
+
+    <update id="addEmailToUsers">
+        update tth_user set email = #{email} where username = #{name}
+    </update>
+
+    <select id="findSameUsername" parameterType="UserModel" resultType="int">
+        SELECT count(*) from tth_user where username = #{username} and status = 1
+    </select>
+
+    <update id="changeStatusByUidToAdd" parameterType="int">
+        update tth_user set status = 1 where id = #{uid}
+    </update>
+
+    <delete id="forceDeleteTeacherByUid" parameterType="int">
+        delete from tth_user where id = #{uid}
+    </delete>
+
+    <update id="changeStatusByUidToDelete" parameterType="int">
+        update tth_user set status = 0 where id = #{uid}
+    </update>
+
+    <select id="findEmailsExceptUid" parameterType="int" resultType="string">
+        SELECT email FROM tth_user WHERE email != '' and id != #{uid}
+    </select>
+
+</mapper>
